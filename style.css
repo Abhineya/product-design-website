@@ -47,3 +47,23 @@ text-transform: uppercase;
 #heading #secondh1{
     margin-left: 230px;
 }
+
+.blocktext{
+   width: fit-content; 
+}
+
+.blocktext h5{
+    text-align: right;
+}
+
+#smallheadings{
+    margin-top: 100px;
+}
+
+#smallheadings h5{
+    text-transform: uppercase;
+    text-align: right;
+    margin-top: 0.5vw;
+    font-size: 1vw;
+    padding-right: 50px;
+}
