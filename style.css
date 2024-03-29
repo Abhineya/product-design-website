@@ -18,6 +18,15 @@ html, body{
     border-radius: 50%;
     background-color: #fff;
 }
+.bounding{
+    width: fit-content;
+    overflow: hidden;
+}
+
+.bounding .boundingelem{
+
+    transform: translateY(100%);
+}
 #main{
     height: auto;
     width: 100%;
@@ -61,15 +70,24 @@ text-transform: uppercase;
 }
 
 .blocktext{
+    display: flex;
+    align-items: end;
+    flex-direction: column;
    width: fit-content; 
 }
 
 .blocktext h5{
-    text-align: right;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: right !important;
 }
 
 #smallheadings{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     margin-top: 100px;
+    padding-right: 50px;
 }
 
 #smallheadings h5{
