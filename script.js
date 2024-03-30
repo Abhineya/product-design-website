@@ -28,11 +28,11 @@ function firstPageAnim() {
       });
   }
 
-function circleEliptical(){
-    window.addEventListener("mousemove",function(dets){
+// function circleEliptical(){
+//     window.addEventListener("mousemove",function(dets){
         
-    })
-}
+//     })
+// }
 
 function circleMouseFollower(){
     window.addEventListener("mousemove", function(dets){
