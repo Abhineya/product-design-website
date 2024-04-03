@@ -28,17 +28,35 @@ function firstPageAnim() {
       });
   }
 
-// function circleEliptical(){
-//     window.addEventListener("mousemove",function(dets){
-        
-//     })
-// }
+function circleEliptical(){
+  var xscale = 1;
+  var yscale = 1;
 
-function circleMouseFollower(){
+  var xprevious = 0;
+  var yprevious = 0;
+    window.addEventListener("mousemove",function(dets){
+      xscale = gsap.utils.clamp(.8, 1.2, dets.clientX - xprevious );
+      yscale = gsap.utils.clamp(.8, 1.2, dets.clientY- yprevious);
+
+   xprevious =   dets.clientX ;
+   yprevious =     dets.clientY;
+
+     circleMouseFollower(xscale, yscale)
+
+  timeout = setTimeout(function (){
+    document.querySelector('#minicircle').style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(1, 1)`;
+  }, 100);
+    });
+}
+
+function circleMouseFollower(xscale, yscale){
+
+
     window.addEventListener("mousemove", function(dets){
-document.querySelector('#minicircle').style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`;
+document.querySelector('#minicircle').style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(${xscale}, ${yscale})`;
     })
 }
 
+circleEliptical();
 circleMouseFollower();
 firstPageAnim();
